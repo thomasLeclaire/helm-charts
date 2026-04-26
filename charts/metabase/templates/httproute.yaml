@@ -58,6 +58,9 @@ spec:
           {{- end }}
           {{- end }}
       {{- end }}
+      {{- if .name }}
+      name: {{ .name }}
+      {{- end }}
       {{- if .filters }}
       filters:
       {{- toYaml .filters | nindent 8 }}

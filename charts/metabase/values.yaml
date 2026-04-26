@@ -342,6 +342,7 @@ httpRoute:
   ##         - path:
   ##             type: PathPrefix
   ##             value: /
+  ##       name: root
   ##       filters:
   ##         - type: RequestHeaderModifier
   ##           requestHeaderModifier:
