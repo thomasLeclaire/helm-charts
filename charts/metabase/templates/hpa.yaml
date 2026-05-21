@@ -1,4 +1,4 @@
-{{- if .Values.hpa.enabled }}
+{{- if and .Values.hpa.enabled (not .Values.hpa.external) }}
 apiVersion: {{ template "hpa.apiVersion" . }}
 kind: HorizontalPodAutoscaler
 metadata:
