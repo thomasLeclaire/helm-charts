@@ -18,6 +18,7 @@ pod_annotations:
   {{- with .Values.podAnnotations }}
   {{ toYaml . | nindent 2 }}
   {{- end }}
+serviceAccountName: {{ .Values.serviceAccountName | default "default" }}
 topologySpreadConstraints:
   {{- toYaml .Values.topologySpreadConstraints | nindent 2 }}
 tolerations:

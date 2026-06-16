@@ -99,6 +99,8 @@ updateStrategy:
     maxUnavailable: 0
     maxSurge: 1
 
+serviceAccountName: default
+
 # Deployment
 replicaCount: 1
 
