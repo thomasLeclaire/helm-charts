@@ -127,6 +127,9 @@ database:
     ## example format: $project:$region:$instance=tcp:$port
     ## Each connection must have a unique TCP port.
     instanceConnectionNames: []
+    ## IP address types for Cloud SQL (e.g. PRIVATE,PUBLIC)
+    ipAddressTypes: ""
+    #
     ## Option to use a specific version and image of the *Cloud SQL Auth proxy* sidecar image.
     ## ref: https://console.cloud.google.com/gcr/images/cloudsql-docker/GLOBAL/gce-proxy
     # sidecarImage: gcr.io/cloudsql-docker/gce-proxy
