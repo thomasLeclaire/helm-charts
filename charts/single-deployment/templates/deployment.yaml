@@ -15,6 +15,7 @@ pod_labels:
   {{- include "single-deployment.selectorLabels" . | nindent 4 }}
 pod_annotations:
   checksum/env-secret: {{ include (print $.Template.BasePath "/env-secret.yaml") . | sha256sum }}
+  checksum/files-secret: {{ include (print $.Template.BasePath "/files-secret.yaml") . | sha256sum }}
   {{- with .Values.podAnnotations }}
   {{ toYaml . | nindent 2 }}
   {{- end }}
