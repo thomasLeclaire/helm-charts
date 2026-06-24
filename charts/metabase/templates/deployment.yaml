@@ -290,6 +290,9 @@ spec:
             - "-structured_logs"
             - "-use_http_health_check"
             - "-enable_iam_login"
+            {{- if .Values.database.googleCloudSQL.ipAddressTypes }}
+            - "-ip_address_types={{ .Values.database.googleCloudSQL.ipAddressTypes }}"
+            {{- end }}
           securityContext:
           {{- .Values.database.googleCloudSQL.securityContext | toYaml | nindent 12 }}
           livenessProbe:
